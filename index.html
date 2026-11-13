@@ -4,51 +4,62 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Morning Brief</title>
+<title>Sai's Morning Brief</title>
 <style>
   :root{--bg:#0F1720;--card:#17212B;--line:#26323E;--text:#E8EDF2;--muted:#9AA8B5;--sf:#00A1E0;--rt:#3D63DD;--go:#00ADD8;--gold:#F2C26B}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.5}
-  main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+  main{max-width:760px;margin:0 auto;padding:28px 16px 56px}
   .hello{color:var(--muted);margin:0}
-  h1{margin:4px 0 0;font-size:32px}
-  .date{color:var(--gold);font-weight:700;margin:4px 0 24px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:14px}
-  .card h2{margin:0 0 8px;font-size:18px;display:flex;align-items:center;gap:10px}
-  .dot{width:10px;height:10px;border-radius:50%}
-  ul{margin:0;padding-left:20px}
-  li{margin:4px 0}
-  .muted{color:var(--muted)}
+  h1{margin:2px 0 6px;font-size:34px;line-height:1.15}
+  .tag{display:inline-block;padding:4px 12px;border-radius:999px;background:rgba(242,194,107,.14);border:1px solid rgba(242,194,107,.45);color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.04em}
+  .summary{color:var(--text);margin:14px 0 6px;font-size:16px}
+  .date{color:var(--muted);margin:0 0 26px;font-size:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--c);border-radius:16px;padding:18px;margin-bottom:16px}
+  .card h2{margin:0;font-size:20px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+  .level{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:color-mix(in srgb,var(--c) 18%,transparent);color:var(--c)}
+  .about{margin:8px 0 14px;color:var(--muted)}
+  h3{margin:0 0 8px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+  .news{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  .news li{padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+  .news a{color:var(--text);font-weight:600;text-decoration:none}
+  .news a:hover{text-decoration:underline}
+  .news p{margin:4px 0 0;color:var(--muted);font-size:14px}
+  .news small{display:block;margin-top:4px;color:var(--muted);font-size:12px}
+  .empty{color:var(--muted);font-size:14px;margin:0}
+  footer{color:var(--muted);font-size:12px;text-align:center;margin-top:24px}
 </style>
 </head>
 <body>
 <main>
   <p class="hello" id="hello">Good morning</p>
-  <h1>Sai's Morning Brief</h1>
+  <h1>Sai Krishna Pavan</h1>
+  <span class="tag">Aspiring Developer</span>
+  <p class="summary">Salesforce Developer in the UK, building with Agentforce on Salesforce and creating fast, polished internal tools in Retool. Next on the journey: Go.</p>
   <p class="date" id="today"></p>
 
-  <section class="card">
-    <h2><span class="dot" style="background:var(--gold)"></span>Reminders</h2>
-    <ul>
-      <li>Example: book Switzerland flights</li>
-      <li>Example: renew passport</li>
-    </ul>
+  <section class="card" style="--c:var(--sf)">
+    <h2>Salesforce <span class="level">Great developer</span></h2>
+    <p class="about">A great developer with lots of Agentforce skills.</p>
+    <h3>Today's news</h3>
+    <ul class="news" id="news-salesforce"><li class="empty">Loading…</li></ul>
   </section>
 
-  <section class="card">
-    <h2><span class="dot" style="background:var(--sf)"></span>Salesforce</h2>
-    <p class="muted">News will appear here once the daily brief is connected.</p>
+  <section class="card" style="--c:var(--rt)">
+    <h2>Retool <span class="level">Great developer</span></h2>
+    <p class="about">A great developer with lots of front-end skills.</p>
+    <h3>Today's news</h3>
+    <ul class="news" id="news-retool"><li class="empty">Loading…</li></ul>
   </section>
 
-  <section class="card">
-    <h2><span class="dot" style="background:var(--rt)"></span>Retool</h2>
-    <p class="muted">News will appear here once the daily brief is connected.</p>
+  <section class="card" style="--c:var(--go)">
+    <h2>Go <span class="level">Ready to learn</span></h2>
+    <p class="about">Ready to learn — going to explore soon.</p>
+    <h3>Today's news</h3>
+    <ul class="news" id="news-go"><li class="empty">Loading…</li></ul>
   </section>
 
-  <section class="card">
-    <h2><span class="dot" style="background:var(--go)"></span>Go</h2>
-    <p class="muted">News will appear here once the daily brief is connected.</p>
-  </section>
+  <footer id="updated"></footer>
 </main>
 <script>
   const now = new Date();
@@ -57,6 +68,28 @@
     h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
   document.getElementById('today').textContent =
     now.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+
+  function esc(s){ return String(s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+  function fill(id, items){
+    const el = document.getElementById(id);
+    if (!items || !items.length){ el.innerHTML = '<li class="empty">No news yet today.</li>'; return; }
+    el.innerHTML = items.slice(0, 5).map(n =>
+      `<li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>` +
+      (n.summary ? `<p>${esc(n.summary)}</p>` : '') +
+      (n.source ? `<small>${esc(n.source)}</small>` : '') + `</li>`).join('');
+  }
+  fetch('news.json', { cache: 'no-store' })
+    .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+    .then(d => {
+      fill('news-salesforce', d.salesforce);
+      fill('news-retool', d.retool);
+      fill('news-go', d.go);
+      if (d.updated) document.getElementById('updated').textContent = 'News updated ' + d.updated;
+    })
+    .catch(() => {
+      ['news-salesforce','news-retool','news-go'].forEach(id =>
+        document.getElementById(id).innerHTML = '<li class="empty">Daily news will appear here once updates are switched on.</li>');
+    });
 </script>
 </body>
 </html>
