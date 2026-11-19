@@ -1,25 +1,68 @@
-cat > index.html <<'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Sai Krishna Pavan</title>
-<style>
-  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0F1720;color:#E8EDF2;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-  main{max-width:640px;padding:32px 20px;text-align:center}
-  h1{margin:0 0 10px;font-size:38px;line-height:1.15}
-  .tag{display:inline-block;padding:4px 14px;border-radius:999px;background:rgba(242,194,107,.14);border:1px solid rgba(242,194,107,.45);color:#F2C26B;font-size:13px;font-weight:700;letter-spacing:.04em}
-  p{margin:18px 0 0;font-size:17px;line-height:1.6;color:#C9D3DC}
-</style>
+<title>Sai Krishna Pavan · Salesforce Developer</title>
+<meta name="description" content="Sai Krishna Pavan: 7x Salesforce Certified developer, All Star Ranger on Trailhead, Retool developer, hands-on with Agentforce.">
+<meta property="og:title" content="Sai Krishna Pavan · Salesforce Developer">
+<meta property="og:description" content="7x Salesforce Certified · All Star Ranger · Retool developer · Hands-on with Agentforce">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23F2C26B'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%230B1220'%3ESP%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-  <h1>Sai Krishna Pavan</h1>
-  <span class="tag">Aspiring Developer</span>
-  <p>Salesforce Developer in the UK, building with Agentforce on Salesforce and creating fast, polished internal tools in Retool. Next on the journey: Go.</p>
+<header><div class="wrap"><nav aria-label="Main">
+  <a class="brand" href="index.html">Sai <span>Krishna Pavan</span></a>
+  <div class="links">
+    <a href="index.html" aria-current="page">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="achievements.html">Achievements</a>
+  </div>
+</nav></div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="avatar" aria-hidden="true">SP</div>
+    <h1>Sai Krishna Pavan</h1>
+    <span class="tag">Aspiring Developer</span>
+    <p class="lead">Salesforce Developer in the UK and Retool developer, hands-on with Agentforce. I love real-world challenges, and I'm aspiring to Go next.</p>
+    <div class="stats">
+      <div class="stat"><b>7x</b><span>Salesforce Certified</span></div>
+      <div class="stat"><b>All Star Ranger</b><span>Trailhead rank</span></div>
+      <div class="stat"><b>Retool</b><span>Developer</span></div>
+      <div class="stat"><b>Go</b><span>Next on the journey</span></div>
+    </div>
+  </section>
+
+  <h2>About me</h2>
+  <div class="card">
+    <p>I build on Salesforce every day and enjoy turning messy, real-world problems into simple tools people actually use. I've spent a lot of time with Agentforce, and in Retool I create fast, polished internal apps with a strong focus on the front end.</p>
+    <p>Right now I'm sharpening my Git and GitHub skills (this site is one of those experiments) and getting ready to explore Go.</p>
+  </div>
+
+  <h2>What I work with</h2>
+  <div class="card">
+    <div class="chips">
+      <span class="chip sf">Salesforce</span>
+      <span class="chip sf">Agentforce</span>
+      <span class="chip rt">Retool</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">REST APIs</span>
+      <span class="chip">Git &amp; GitHub</span>
+      <span class="chip go learn">Go · learning</span>
+    </div>
+  </div>
+
+  <div class="cta">
+    <a class="btn primary" href="projects.html">See my projects</a>
+    <a class="btn ghost" href="achievements.html">Achievements</a>
+  </div>
 </main>
+
+<footer><div class="wrap">
+  © <span id="y"></span> Sai Krishna Pavan · <a href="https://github.com/saikrishnapavan19">GitHub</a>
+  <!-- Add more links here, e.g. · <a href="https://www.linkedin.com/in/YOUR-NAME">LinkedIn</a> · <a href="https://www.salesforce.com/trailblazer/YOUR-ID">Trailhead</a> -->
+</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
-EOF
