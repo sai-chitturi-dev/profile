@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects · Sai Krishna Pavan</title>
+<meta name="description" content="Projects by Sai Krishna Pavan: Salesforce, Retool and web builds.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23F2C26B'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%230B1220'%3ESP%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main">
+  <a class="brand" href="index.html">Sai <span>Krishna Pavan</span></a>
+  <div class="links">
+    <a href="index.html">About</a>
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="achievements.html">Achievements</a>
+  </div>
+</nav></div></header>
+
+<main class="wrap">
+  <h1>Projects</h1>
+  <p class="sub">Things I've built and the problems they solve.</p>
+
+  <div class="grid">
+    <article class="card accent" style="--c:var(--rt)">
+      <h3>Internal tools in Retool</h3>
+      <p class="meta">Work · Retool</p>
+      <p>Finance, migration and operations apps used every day by internal teams. A big focus is speed: replacing slow "fetch everything" loops with filtered API calls so screens load fast.</p>
+      <div class="chips"><span class="chip rt">Retool</span><span class="chip">JavaScript</span><span class="chip">REST APIs</span></div>
+    </article>
+
+    <article class="card accent" style="--c:var(--gold)">
+      <h3>Wedding website</h3>
+      <p class="meta">Personal · Web</p>
+      <p>A bilingual (Telugu and English) wedding site with a live countdown, a schedule you can filter by family side, venue directions, one-tap calling and music.</p>
+      <div class="chips"><span class="chip">HTML &amp; CSS</span><span class="chip">JavaScript</span><span class="chip">GitHub</span><span class="chip">Netlify</span></div>
+    </article>
+
+    <article class="card accent" style="--c:var(--ok)">
+      <h3>This portfolio</h3>
+      <p class="meta">Personal · Learning Git</p>
+      <p>Built while learning Git and GitHub end to end: GitHub Desktop, Codespaces, commits from the terminal, GitHub Actions and now GitHub Pages.</p>
+      <div class="chips"><span class="chip">HTML &amp; CSS</span><span class="chip">Git &amp; GitHub</span><span class="chip">GitHub Pages</span></div>
+    </article>
+
+    <!-- Copy this block to add a project (e.g. your Agentforce work), then remove the comment marks:
+    <article class="card accent" style="--c:var(--sf)">
+      <h3>Project name</h3>
+      <p class="meta">Work · Salesforce</p>
+      <p>One or two sentences: the problem, what you built, and the result.</p>
+      <div class="chips"><span class="chip sf">Agentforce</span><span class="chip sf">Salesforce</span></div>
+    </article>
+    -->
+  </div>
+</main>
+
+<footer><div class="wrap">
+  © <span id="y"></span> Sai Krishna Pavan · <a href="https://github.com/saikrishnapavan19">GitHub</a>
+</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
