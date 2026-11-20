@@ -41,7 +41,7 @@
     </div>
     <div class="hero-photo fade d2">
       <div class="ring">
-        <img src="profile.jpg" alt="Sai Krishna Pavan" width="290" height="290">
+        <div class="photo-img" role="img" aria-label="Sai Krishna Pavan"></div>
         <span class="float f1">☁️ 7x Certified</span>
         <span class="float f2">🤖 Agentforce</span>
       </div>
@@ -147,6 +147,10 @@
   © <span id="y"></span> Sai Krishna Pavan · Salesforce Developer
   <!-- Add links here later, e.g. · <a href="https://www.linkedin.com/in/YOUR-NAME">LinkedIn</a> -->
 </div></footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+// Block right-click / long-press menu on the photo
+document.querySelector('.ring').addEventListener('contextmenu',e=>e.preventDefault());
+</script>
 </body>
 </html>
