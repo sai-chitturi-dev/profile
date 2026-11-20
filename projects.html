@@ -4,13 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects · Sai Krishna Pavan</title>
-<meta name="description" content="Projects by Sai Krishna Pavan: Salesforce, Retool and web builds.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23F2C26B'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%230B1220'%3ESP%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Salesforce projects by Sai Krishna Pavan: Agentforce agents, an LWC intelligence hub and automated report clean-up with the Metadata API.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23F2C26B'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%23070C18'%3ESP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header><div class="wrap"><nav aria-label="Main">
-  <a class="brand" href="index.html">Sai <span>Krishna Pavan</span></a>
+  <a class="brand" href="index.html"><i>SP</i>Sai Krishna Pavan</a>
   <div class="links">
     <a href="index.html">About</a>
     <a href="projects.html" aria-current="page">Projects</a>
@@ -19,44 +22,87 @@
 </nav></div></header>
 
 <main class="wrap">
-  <h1>Projects</h1>
-  <p class="sub">Things I've built and the problems they solve.</p>
+  <div class="page-head fade">
+    <span class="eyebrow">Projects</span>
+    <h1>Things I've <span class="grad">built</span></h1>
+    <p>Salesforce work across AI agents, Lightning Web Components and platform automation.</p>
+  </div>
 
-  <div class="grid">
-    <article class="card accent" style="--c:var(--rt)">
-      <h3>Internal tools in Retool</h3>
-      <p class="meta">Work · Retool</p>
-      <p>Finance, migration and operations apps used every day by internal teams. A big focus is speed: replacing slow "fetch everything" loops with filtered API calls so screens load fast.</p>
-      <div class="chips"><span class="chip rt">Retool</span><span class="chip">JavaScript</span><span class="chip">REST APIs</span></div>
+  <div class="grid project-list" style="margin-top:36px">
+
+    <!-- PROJECT 1 -->
+    <article class="card project fade d1" style="--c:var(--ai)">
+      <span class="num">01</span>
+      <div>
+        <span class="type">Agentforce · Hackathon</span>
+        <h3>AI agents built in an Agentforce hackathon</h3>
+        <p>Designed and built Agentforce agents from scratch during a hackathon, going from the learning phase to working agents that answer questions and take action on Salesforce data.</p>
+        <div class="chips">
+          <span class="chip ai">Agentforce</span>
+          <span class="chip ai">Prompt Builder</span>
+          <span class="chip sf">Apex Actions</span>
+          <span class="chip sf">Flows</span>
+        </div>
+      </div>
+      <ul class="points">
+        <li>Learned Agentforce quickly in the hackathon's learning phase</li>
+        <li>Defined agent topics, instructions and guardrails</li>
+        <li>Connected agents to real actions with Apex and Flows</li>
+        <li>Grounded responses in Salesforce data with Prompt Builder</li>
+      </ul>
     </article>
 
-    <article class="card accent" style="--c:var(--gold)">
-      <h3>Wedding website</h3>
-      <p class="meta">Personal · Web</p>
-      <p>A bilingual (Telugu and English) wedding site with a live countdown, a schedule you can filter by family side, venue directions, one-tap calling and music.</p>
-      <div class="chips"><span class="chip">HTML &amp; CSS</span><span class="chip">JavaScript</span><span class="chip">GitHub</span><span class="chip">Netlify</span></div>
+    <!-- PROJECT 2 -->
+    <article class="card project fade d2" style="--c:var(--sf)">
+      <span class="num">02</span>
+      <div>
+        <span class="type">Core Salesforce · LWC</span>
+        <h3>Intelligence Hub</h3>
+        <p>A Lightning Web Components hub that brings data from external systems into Salesforce and keeps it in sync, so users see everything they need in one place.</p>
+        <div class="chips">
+          <span class="chip sf">LWC</span>
+          <span class="chip sf">Apex</span>
+          <span class="chip sf">REST Callouts</span>
+          <span class="chip sf">Named Credentials</span>
+          <span class="chip sf">Scheduled Apex</span>
+        </div>
+      </div>
+      <ul class="points">
+        <li>Built the hub UI with Lightning Web Components</li>
+        <li>Integrated external data through Apex REST callouts</li>
+        <li>Automated data sync so records stay up to date</li>
+        <li>Secured connections with Named Credentials</li>
+      </ul>
     </article>
 
-    <article class="card accent" style="--c:var(--ok)">
-      <h3>This portfolio</h3>
-      <p class="meta">Personal · Learning Git</p>
-      <p>Built while learning Git and GitHub end to end: GitHub Desktop, Codespaces, commits from the terminal, GitHub Actions and now GitHub Pages.</p>
-      <div class="chips"><span class="chip">HTML &amp; CSS</span><span class="chip">Git &amp; GitHub</span><span class="chip">GitHub Pages</span></div>
+    <!-- PROJECT 3 -->
+    <article class="card project fade d3" style="--c:var(--gold)">
+      <span class="num">03</span>
+      <div>
+        <span class="type">Core Salesforce · Automation</span>
+        <h3>Automated monthly report deletion</h3>
+        <p>An automated clean-up that uses the Metadata API to find and delete reports every month, keeping the org tidy without anyone doing it by hand.</p>
+        <div class="chips">
+          <span class="chip sf">Metadata API</span>
+          <span class="chip sf">Apex</span>
+          <span class="chip sf">Batch Apex</span>
+          <span class="chip sf">Scheduled Apex</span>
+        </div>
+      </div>
+      <ul class="points">
+        <li>Used the Metadata API to manage reports in code</li>
+        <li>Scheduled the job to run automatically every month</li>
+        <li>Replaced a slow, manual clean-up task</li>
+        <li>Keeps the org clean and easier to use</li>
+      </ul>
     </article>
 
-    <!-- Copy this block to add a project (e.g. your Agentforce work), then remove the comment marks:
-    <article class="card accent" style="--c:var(--sf)">
-      <h3>Project name</h3>
-      <p class="meta">Work · Salesforce</p>
-      <p>One or two sentences: the problem, what you built, and the result.</p>
-      <div class="chips"><span class="chip sf">Agentforce</span><span class="chip sf">Salesforce</span></div>
-    </article>
-    -->
+    <!-- To add a project: copy one <article> ... </article> block above, paste it here and change the text -->
   </div>
 </main>
 
 <footer><div class="wrap">
-  © <span id="y"></span> Sai Krishna Pavan · <a href="https://github.com/saikrishnapavan19">GitHub</a>
+  © <span id="y"></span> Sai Krishna Pavan · Salesforce Developer
 </div></footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
