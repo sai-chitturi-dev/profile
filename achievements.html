@@ -8,28 +8,29 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23F2C26B'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%23070C18'%3ESP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header><div class="wrap"><nav aria-label="Main">
-  <a class="brand" href="index.html"><i>SP</i>Sai Krishna Pavan</a>
+  <a class="brand" href="./"><i>SP</i>Sai Krishna Pavan</a>
   <div class="links">
-    <a href="index.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="achievements.html" aria-current="page">Achievements</a>
+    <a href="./">About</a>
+    <a href="projects">Projects</a>
+    <a href="achievements" aria-current="page">Achievements</a>
   </div>
 </nav></div></header>
 
 <main class="wrap">
-  <div class="page-head fade">
+  <div class="page-head">
     <span class="eyebrow">Achievements</span>
     <h1>Milestones I'm <span class="grad">proud of</span></h1>
     <p>Certifications, ranks and moments where I stepped up.</p>
   </div>
 
   <!-- BADGES -->
-  <div class="grid three fade d1" style="margin-top:36px">
+  <div class="grid three" style="margin-top:36px">
     <div class="card badge">
       <span class="icon" aria-hidden="true">☁️</span>
       <div><h3>7x Certified</h3><p class="meta">Salesforce certifications</p></div>
@@ -40,12 +41,12 @@
     </div>
     <div class="card badge">
       <span class="icon" aria-hidden="true">🤖</span>
-      <div><h3>Agentforce</h3><p class="meta">Hackathon builder</p></div>
+      <div><h3>Agentforce Specialist</h3><p class="meta">Salesforce certified</p></div>
     </div>
   </div>
 
   <!-- RETOOL STORY -->
-  <section class="fade d2">
+  <section>
     <span class="eyebrow">Retool</span>
     <h2>From new tool to leading it</h2>
     <ul class="timeline">
@@ -74,26 +75,27 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section class="fade d3">
+  <section>
     <span class="eyebrow">Certifications</span>
-    <h2>Salesforce certifications</h2>
-    <div class="card">
-      <p class="meta">Full list coming soon.</p>
-      <!-- Replace the line above with your certifications, like this:
-      <div class="chips">
-        <span class="chip sf">Platform Developer I</span>
-        <span class="chip sf">Certification name</span>
-      </div>
-      -->
+    <h2>7 Salesforce certifications</h2>
+    <div class="grid certs">
+      <div class="card cert" style="--c:var(--ai)"><span class="cat">Agentforce</span><h3>Agentforce Specialist</h3><span class="ok-tag">Active</span></div>
+      <div class="card cert" style="--c:var(--sf)"><span class="cat">Platform</span><h3>Platform Administrator</h3><span class="ok-tag">Active</span></div>
+      <div class="card cert" style="--c:var(--sf)"><span class="cat">Platform</span><h3>Platform Administrator II</h3><span class="ok-tag">Active</span></div>
+      <div class="card cert" style="--c:var(--sf)"><span class="cat">Platform</span><h3>Platform Developer</h3><span class="ok-tag">Active</span></div>
+      <div class="card cert" style="--c:var(--sf)"><span class="cat">Platform</span><h3>Platform Developer II</h3><span class="ok-tag">Active</span></div>
+      <div class="card cert" style="--c:var(--sf)"><span class="cat">Platform</span><h3>JavaScript Developer</h3><span class="ok-tag">Active</span></div>
+      <div class="card cert" style="--c:var(--gold)"><span class="cat">Sales</span><h3>Agentforce Sales Consultant</h3><span class="ok-tag">Active</span></div>
     </div>
   </section>
 
   <!-- LEARNING -->
   <section>
     <span class="eyebrow">Always learning</span>
-    <h2>Currently learning</h2>
+    <h2>What I'm learning now</h2>
     <div class="card">
-      <div class="chips" style="margin-top:0"><span class="chip go">Go</span><span class="chip">Git &amp; GitHub</span><span class="chip">GitHub Actions</span></div>
+      <p>After working deeply with AI on Salesforce, I'm now learning Claude to build with AI beyond the platform, and Go is next.</p>
+      <div class="chips"><span class="chip cl">Claude (AI)</span><span class="chip go">Go</span><span class="chip">GitHub Actions</span></div>
     </div>
   </section>
 </main>
